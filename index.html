@@ -58,7 +58,32 @@
 
     <h3>El Legado</h3>
     <p>Con la muerte de <strong>Iron Man</strong> y el retiro de <strong>Captain America</strong>, los Avengers entran en una nueva era, con nuevos héroes listos para continuar su legado.</p>`,
-                'personaje_favorito': '<h2>Personaje Favorito</h2><p>Detalles sobre el personaje favorito.</p>'
+                'personaje_favorito': `
+    <h2>Iron Man</h2>
+    <p><strong>Tony Stark</strong>, también conocido como <strong>Iron Man</strong>, es un genio multimillonario, playboy y filántropo que, tras ser secuestrado y gravemente herido, construye una armadura para sobrevivir y decide usar su tecnología para proteger al mundo. Con su brillantez e innovación, se convierte en el corazón de los Avengers y en un símbolo de sacrificio y heroísmo.</p>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/ironman1.jpg" class="d-block w-100" alt="Iron Man en su primera armadura">
+        </div>
+        <div class="carousel-item">
+          <img src="img/ironman2.jpg" class="d-block w-100" alt="Iron Man en acción">
+        </div>
+        <div class="carousel-item">
+          <img src="img/ironman3.jpg" class="d-block w-100" alt="Tony Stark sin casco en la batalla">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+`
             };
             document.getElementById('content').innerHTML = content[section];
         }
