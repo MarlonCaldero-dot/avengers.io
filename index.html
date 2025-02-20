@@ -9,13 +9,40 @@
     <script>
         function showContent(section) {
             const content = {
-                'heroes': '<h2>Heroes</h2><p>Información sobre héroes.</p>',
-                'historia': '<h2>Historia</h2><p>Datos históricos relevantes.</p>',
+                'heroes': `
+                    <h2>Heroes</h2>
+                    <p>Conoce algunos de los héroes más icónicos.</p>
+                    <div class="row row-cols-2 g-3">
+                        ${[
+                        { name: "Iron Man", img: "img/1.jpg", desc: "Genio multimillonario con una armadura avanzada." },
+                        { name: "Spider-Man", img: "img/2.jpg", desc: "Héroe arácnido con grandes poderes y responsabilidad." },
+                        { name: "Captain America", img: "img/3.jpg", desc: "El primer vengador con escudo indestructible." },
+                        { name: "Black Panther", img: "img/4.jpg", desc: "Rey de Wakanda con tecnología avanzada." },
+                        { name: "Thor", img: "img/5.jpg", desc: "Dios del trueno y protector de Asgard." },
+                        { name: "Hulk", img: "img/6.jpg", desc: "Científico con una fuerza imparable." },
+                        { name: "Doctor Strange", img: "img/7.jpg", desc: "El hechicero supremo, maestro de las artes místicas." },
+                        { name: "Scarlet Witch", img: "img/8.jpg", desc: "Posee poderes mágicos y habilidades de alteración de la realidad." },
+                        { name: "Ant-Man", img: "img/9.jpg", desc: "Héroe capaz de cambiar su tamaño y comunicarse con insectos." },
+                        { name: "Wolverine", img: "img/10.jpg", desc: "Mutante con garras de adamantium y factor de curación acelerado." }
+                 ].map(hero => `
+                            <div class="col">
+                                <div class="card" style="width: 100%; min-height: 400px;"">
+                                    <img src="${hero.img}" class="card-img-top" alt="${hero.name}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${hero.name}</h5>
+                                        <p class="card-text">${hero.desc}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `,
+                'historia': '<h2>Historia</h2><p>Datos históricos relevantes sobre los héroes.</p>',
                 'personaje_favorito': '<h2>Personaje Favorito</h2><p>Detalles sobre el personaje favorito.</p>'
             };
             document.getElementById('content').innerHTML = content[section];
         }
-    </script>
+    </script>    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
